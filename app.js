@@ -133,8 +133,8 @@ function openArticle(id) {
 
         // Assign dynamic layout style pattern class to container
         const postIndex = rawPostsArray.findIndex(p => p.id === post.id);
-        const layoutPatternClass = `layout-pattern-${(postIndex % 4) + 1}`;
-        articleView.className = `view-section active ${layoutPatternClass}`;
+        const layoutPatternClass = `layout-pattern-${((postIndex >= 0 ? postIndex : 0) % 4) + 1}`;
+        articleView.className = `view-panel active ${layoutPatternClass}`;
 
         document.getElementById("article-content").innerHTML = post.contentPart1 || "";
         document.getElementById("article-content-part2").innerHTML = post.contentPart2 || "";
@@ -332,16 +332,23 @@ function updateThemeButton(theme) {
 }
 
 window.toggleTheme = function(e) {
-    if (e) e.preventDefault();
+    if (e && e.preventDefault) e.preventDefault();
     const body = document.body;
-    if (body.classList.contains("dark-theme")) {
+    const root = document.documentElement;
+    const isDark = body.classList.contains("dark-theme") || root.classList.contains("dark-theme");
+    
+    if (isDark) {
         body.classList.remove("dark-theme");
         body.classList.add("light-theme");
+        root.classList.remove("dark-theme");
+        root.classList.add("light-theme");
         localStorage.setItem("dashboard-theme", "light-theme");
         updateThemeButton("light-theme");
     } else {
         body.classList.remove("light-theme");
         body.classList.add("dark-theme");
+        root.classList.remove("light-theme");
+        root.classList.add("dark-theme");
         localStorage.setItem("dashboard-theme", "dark-theme");
         updateThemeButton("dark-theme");
     }
@@ -351,6 +358,8 @@ function initThemeSwitcher() {
     const savedTheme = localStorage.getItem("dashboard-theme") || "light-theme";
     document.body.classList.remove("light-theme", "dark-theme");
     document.body.classList.add(savedTheme);
+    document.documentElement.classList.remove("light-theme", "dark-theme");
+    document.documentElement.classList.add(savedTheme);
     updateThemeButton(savedTheme);
     
     const btn = document.getElementById("theme-toggle-btn");
