@@ -135,7 +135,7 @@ a {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-right: 1px solid var(--border-color);
-    padding: 30px 24px;
+    padding: 20px 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,24 +147,24 @@ a {
 .sidebar-brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.6rem;
+    gap: 10px;
+    font-size: 1.5rem;
     font-weight: 900;
     color: var(--text-primary);
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     border-bottom: 1px solid var(--border-color);
 }
 
 .brand-logo-img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 8px var(--border-glow);
 }
 
 .brand-icon {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--accent-primary);
     filter: drop-shadow(0 0 10px var(--border-glow));
 }
@@ -174,17 +174,17 @@ a {
 }
 
 .sidebar-nav {
-    margin-top: 30px;
+    margin-top: 15px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 12px;
 }
 
 .nav-section-title {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 800;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
     color: var(--text-muted);
     text-transform: uppercase;
 }
@@ -193,18 +193,18 @@ a {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .sidebar-link {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 12px 16px;
-    border-radius: 10px;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
     color: var(--text-secondary);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     transition: var(--transition);
 }
 
@@ -218,7 +218,7 @@ a {
 }
 
 .sidebar-link .link-icon {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* Sidebar Ad Widget */
@@ -226,8 +226,8 @@ a {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
     border: 1px dashed var(--accent-gold);
     border-radius: 12px;
-    padding: 18px;
-    margin-top: 10px;
+    padding: 6px 2px;
+    margin-top: 5px;
     box-shadow: var(--shadow-sm);
 }
 
