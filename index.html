@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartlyEarn Personal Finance & Micro-Investing - Modern Fintech Dashboard. Smart saving tricks, budgeting tools, credit card reward points optimization.">
+    <title>SmartlyEarn | Fintech Dashboard & Finance Guides</title>
+    
+    <!-- Favicon Logo -->
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 💰 Google AdSense Auto-Ads Integration (Optional) -->
+    <!-- Replace 'ca-pub-XXXXXXXXXXXXXXXX' below with the Client's Google AdSense Publisher ID -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body class="light-theme">
+
+    <!-- Decorative Animated Background Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
+
+    <div class="dashboard-wrapper">
+        
+        <!-- Ultra Left Sidebar Navigation (Desktop) -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-brand" id="nav-logo" onclick="window.location.hash='#home'" style="cursor: pointer;">
+                <img src="assets/logo.svg" alt="SmartlyEarn Logo" class="brand-logo-img">
+                <span class="brand-text">Smartly<span class="brand-highlight">Earn</span></span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <span class="nav-section-title">NAVIGATION</span>
+                <ul>
+                    <li>
+                        <a href="#home" class="sidebar-link active" data-target="home">
+                            <span class="link-icon">📊</span>
+                            <span class="link-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#saving-rule" class="sidebar-link" data-target="saving-rule">
+                            <span class="link-icon">🧮</span>
+                            <span class="link-text">Budget Rule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#micro-investing" class="sidebar-link" data-target="micro-investing">
+                            <span class="link-icon">🌱</span>
+                            <span class="link-text">Micro-Investing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#credit-card" class="sidebar-link" data-target="credit-card">
+                            <span class="link-icon">💳</span>
+                            <span class="link-text">Card Optimization</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <span class="nav-section-title">SPONSORED PLATFORMS</span>
+                <div class="sidebar-ad-card">
+                    <span class="sidebar-ad-tag">ADVERTISEMENT</span>
+                    <h4>Prime Yield Bond</h4>
+                    <p>Earn 10.4% APY securely with AI-managed reserves.</p>
+                    <a href="#" onclick="triggerAdClick(event, 'Sidebar Ad Widget')" class="sidebar-ad-btn">Open Free Account</a>
+                </div>
+            </nav>
+            
+            
+        </aside>
+
+        <!-- Main Dashboard content pane -->
+        <div class="main-dashboard-content">
+            
+            <!-- Dashboard Topbar Header -->
+            <header class="dashboard-topbar">
+                <div class="topbar-search">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="dashboard-search-input" placeholder="Search guides, budget rules, rewards...">
+                </div>
+                <div class="topbar-actions">
+                    <button id="theme-toggle-btn" class="topbar-theme-toggle">
+                        <span class="toggle-icon">🌙</span>
+                        <span class="toggle-text">Dark Mode</span>
+                    </button>
+                    <div class="status-indicator">
+                        <span class="pulse-dot"></span>
+                        <span class="status-text">Market Data Live</span>
+                    </div>
+                    <div class="user-profile-badge">
+                        <span class="profile-avatar">👤</span>
+                        <span class="profile-name">Visitor</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Leaderboard Leader Ad placement -->
+            <section class="ad-section-leaderboard">
+                <div class="ad-container-leaderboard">
+                    <div class="ad-tag">SPONSORED PROMOTION</div>
+                    <div class="ad-leaderboard-content">
+                        <div class="ad-icon">💎</div>
+                        <div class="ad-text-wrap">
+                            <h4>Chase Sapphire Preferred® Special Offer</h4>
+                            <p>Earn 60,000 bonus points after spending $4,000 on purchases in the first 3 months.</p>
+                        </div>
+                        <a href="#" class="ad-btn" onclick="triggerAdClick(event, 'Hero Leaderboard Ad')">Claim Offer</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page Panels -->
+            <main class="dashboard-pages">
+                
+                <!-- Home Dashboard view -->
+                <div id="home-view" class="view-panel active">
+                    
+                    <!-- Asymmetric Hero Section -->
+                    <div class="asymmetric-hero-grid">
+                        
+                        <!-- Hero Post Highlight Card -->
+                        <div class="hero-highlight-card" style="background-image: linear-gradient(to bottom, rgba(30, 41, 59, 0.1), rgba(15, 23, 42, 0.95)), url('assets/hero.png');">
+                            <div class="hero-badge">FEATURED ARTICLE</div>
+                            <h2>Smart Personal Finance & Micro-Investing Guide</h2>
+                            <p>Master saving methodologies, run weekly investment models, and explore rewards points hacks built to fast-track financial independence.</p>
+                            <a href="#saving-rule" class="hero-read-btn">Explore Budget Framework &rarr;</a>
+                        </div>
+                        
+                        <!-- Sidebar-like quick tool card (embedded to right of hero) -->
+                        <div class="hero-tool-card">
+                            <div class="tool-card-header">
+                                <span class="tool-icon">⚡</span>
+                                <h3>Quick Budget Allocator</h3>
+                            </div>
+                            <p>Check the 50/30/20 spending allocations for any monthly income target instantly.</p>
+                            <div class="tool-input-group">
+                                <label>Enter Monthly Income ($):</label>
+                                <input type="number" id="quick-calc-input" value="2000" oninput="calculateQuickBudget()">
+                            </div>
+                            <div class="tool-results">
+                                <div class="tool-res-item">
+                                    <span>Needs (50%):</span>
+                                    <strong id="quick-needs">$1,000</strong>
+                                </div>
+                                <div class="tool-res-item">
+                                    <span>Wants (30%):</span>
+                                    <strong id="quick-wants">$600</strong>
+                                </div>
+                                <div class="tool-res-item">
+                                    <span>Savings (20%):</span>
+                                    <strong id="quick-savings" class="savings-highlight">$400</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Category Filtering Tabs (Ultra Level Interaction) -->
+                    <div class="feed-filters-bar">
+                        <h3>Financial Guides</h3>
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">All Guides</button>
+                            <button class="filter-tab" data-filter="Budgeting Framework">Budgeting</button>
+                            <button class="filter-tab" data-filter="Micro-Investing Guide">Investing</button>
+                            <button class="filter-tab" data-filter="Reward Optimization">Credit Cards</button>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Asymmetric Feed Grid -->
+                    <div class="dashboard-feed-grid">
+                        
+                        <!-- Article 1 Card -->
+                        <article class="feed-card" data-category="Budgeting Framework">
+                            <div class="card-image-wrap">
+                                <img src="assets/saving.png" alt="Saving Model">
+                                <div class="card-badge">Budgeting</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>How to Save Your First $1,000 using the 50/30/20 Budgeting Rule</h3>
+                                <p>Saving $1,000 is the ultimate foundational launchpad for young professionals. Learn how this percentage model secures your path.</p>
+                                <div class="card-footer">
+                                    <a href="#saving-rule" class="read-link">Start Reading &rarr;</a>
+                                    <span class="read-time">12 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- In-Feed Native Ad Widget 1 -->
+                        <div class="feed-ad-card">
+                            <span class="ad-tag-badge">SPONSORED</span>
+                            <div class="ad-card-banner" style="background-image: url('assets/ad_native.png');"></div>
+                            <div class="ad-card-body">
+                                <h4>Start Your Business with $100: Learn the 5 Proven Steps to Earn $5,000/Month</h4>
+                                <p class="ad-source-domain">FinGrow.com</p>
+                                <a href="#" onclick="triggerAdClick(event, 'In-Feed Native Card 1')" class="ad-card-cta">Get Free Guide</a>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 Card -->
+                        <article class="feed-card" data-category="Micro-Investing Guide">
+                            <div class="card-image-wrap">
+                                <div class="card-placeholder-gradient" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                                    <span>🌱</span>
+                                </div>
+                                <div class="card-badge">Investing</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Micro-Investing: How to Start Investing with Only $10 a Week</h3>
+                                <p>Discover how fractional shares and automated index funds set up compounding growth loops using small spare capital.</p>
+                                <div class="card-footer">
+                                    <a href="#micro-investing" class="read-link">Start Reading &rarr;</a>
+                                    <span class="read-time">10 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- In-Feed Native Ad Widget 2 (Crypto Card) -->
+                        <div class="feed-ad-card text-ad">
+                            <span class="ad-tag-badge">SPONSORED SPECIAL DEALS</span>
+                            <div class="ad-text-card-content">
+                                <span>🪙</span>
+                                <h4>This Under-The-Radar Crypto Coin is Slated to Grow 1,000% in 2026!</h4>
+                                <p>Financial institutions are quietly accumulating this utility asset. Discover the transaction ticker immediately.</p>
+                                <a href="#" onclick="triggerAdClick(event, 'In-Feed Native Crypto Card')" class="ad-text-cta">Reveal Ticker Symbol</a>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 Card -->
+                        <article class="feed-card" data-category="Reward Optimization">
+                            <div class="card-image-wrap">
+                                <div class="card-placeholder-gradient" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                                    <span>✈️</span>
+                                </div>
+                                <div class="card-badge">Rewards</div>
+                            </div>
+                            <div class="card-body">
+                                <h3>Maximize Credit Card Reward Points for Free Flights and Hotel Stays</h3>
+                                <p>Learn travel hacking methods. Master point transfer multipliers and welcome bonuses to travel luxury for free.</p>
+                                <div class="card-footer">
+                                    <a href="#credit-card" class="read-link">Start Reading &rarr;</a>
+                                    <span class="read-time">15 min read</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Sidebar Popular Widget (Merged as Feed element on fluid view) -->
+                        <div class="feed-trending-card">
+                            <h3>Trending Analytics</h3>
+                            <ul class="trending-dashboard-list">
+                                <li>
+                                    <span class="trend-rank">01</span>
+                                    <div>
+                                        <a href="#saving-rule">50/30/20 savings rule blueprint</a>
+                                        <span class="trend-views">8.2k readers this week</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="trend-rank">02</span>
+                                    <div>
+                                        <a href="#micro-investing">Compounding models for weekly $10</a>
+                                        <span class="trend-views">5.4k readers this week</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="trend-rank">03</span>
+                                    <div>
+                                        <a href="#credit-card">Airline point transfer ratio hacks</a>
+                                        <span class="trend-views">4.9k readers this week</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Single Article view -->
+                <div id="article-view" class="view-panel">
+                    <button id="back-to-feed-btn" class="back-btn">&larr; Back to Dashboard Feed</button>
+                    
+                    <article class="dashboard-article-card">
+                        
+                        <div class="article-details-header">
+                            <span id="article-category" class="article-badge">Category</span>
+                            <h1 id="article-title" class="article-main-title">Article Title</h1>
+                            <div class="article-meta-info">
+                                <span>Author: <strong>SmartlyEarn Editorial Team</strong></span>
+                                <span class="meta-dot"></span>
+                                <span id="article-read-time">10 min read</span>
+                            </div>
+                        </div>
+
+                        <!-- Top Article inline banner -->
+                        <div class="inline-article-top-ad">
+                            <div class="ad-tag">SPONSORED DEAL</div>
+                            <a href="#" onclick="triggerAdClick(event, 'Article Inline Text Banner')">
+                                <strong>🚀 Exclusive:</strong> Open a Chase Freedom Flex card and get up to 5% cash back on category purchases! Apply here.
+                            </a>
+                        </div>
+
+                        <!-- Main content injection area -->
+                        <div id="article-content" class="article-rendered-body">
+                            <!-- Injected JS -->
+                        </div>
+
+                        <!-- Mid article native banner -->
+                        <div class="inline-article-mid-ad">
+                            <div class="ad-tag">RECOMMENDED BY SPONSOR</div>
+                            <div class="mid-ad-flex">
+                                <div class="mid-ad-image" style="background-image: url('assets/ad_native.png');"></div>
+                                <div class="mid-ad-details">
+                                    <h4>Get Your Credit Report and Score for Free</h4>
+                                    <p>Premier credit tier status unlocks prime rates. Run an instant check safely without affecting your file.</p>
+                                    <a href="#" onclick="triggerAdClick(event, 'Article Mid Grid Ad')" class="mid-ad-cta">Check Free Score</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main content part 2 injection area -->
+                        <div id="article-content-part2" class="article-rendered-body">
+                            <!-- Injected JS -->
+                        </div>
+
+                    </article>
+                </div>
+
+            </main>
+
+            <!-- Premium Taboola/Outbrain native recommendation feed -->
+            <section class="sponsored-recommendations-section">
+                <h3 class="section-title">Sponsored Content You May Like</h3>
+                <div class="recommendations-layout">
+                    <div class="rec-ad-card">
+                        <div class="rec-image" style="background-image: url('assets/ad_native.png');"></div>
+                        <div class="rec-body">
+                            <h4>Doctors Shocked: This Morning Routine Dissolves Belly Fat Consistently</h4>
+                            <span class="rec-source">HealthTips Direct</span>
+                        </div>
+                        <a href="#" onclick="triggerAdClick(event, 'Footer Recommendation Card 1')" class="rec-link"></a>
+                    </div>
+                    <div class="rec-ad-card">
+                        <div class="rec-image" style="background-image: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);">
+                            <div class="placeholder-emoji">🎁</div>
+                        </div>
+                        <div class="rec-body">
+                            <h4>iPhone 17 Pro Early Access Giveaway: Take the 60-Second Challenge Now</h4>
+                            <span class="rec-source">MegaSweeps</span>
+                        </div>
+                        <a href="#" onclick="triggerAdClick(event, 'Footer Recommendation Card 2')" class="rec-link"></a>
+                    </div>
+                    <div class="rec-ad-card">
+                        <div class="rec-image" style="background-image: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);">
+                            <div class="placeholder-emoji">✈️</div>
+                        </div>
+                        <div class="rec-body">
+                            <h4>Move to Canada Under Easiest Student Visa Terms: No IELTS Required</h4>
+                            <span class="rec-source">StudyPathway Global</span>
+                        </div>
+                        <a href="#" onclick="triggerAdClick(event, 'Footer Recommendation Card 3')" class="rec-link"></a>
+                    </div>
+                    <div class="rec-ad-card">
+                        <div class="rec-image" style="background-image: linear-gradient(135deg, #ea580c 0%, #f97316 100%);">
+                            <div class="placeholder-emoji">🚗</div>
+                        </div>
+                        <div class="rec-body">
+                            <h4>Unsold Pre-Owned Japanese SUVs Listed for Under $6,000! Search Tiers</h4>
+                            <span class="rec-source">ImportDeals Direct</span>
+                        </div>
+                        <a href="#" onclick="triggerAdClick(event, 'Footer Recommendation Card 4')" class="rec-link"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Global Footer -->
+            <footer class="dashboard-footer-bar">
+                <div class="footer-header">
+                    <span class="footer-brand"><img src="assets/logo.svg" alt="SmartlyEarn" style="width: 26px; height: 26px; vertical-align: middle; border-radius: 6px; margin-right: 8px;"> SmartlyEarn</span>
+                    <p class="footer-copyright">© 2026 SmartlyEarn. Powered by AI & Antigravity. All rights reserved.</p>
+                </div>
+                <p class="footer-legal">Disclaimer: All articles, algorithms, financial formulas, and point optimizations detailed on this platform are for educational and entertainment purposes only. Do not execute transactions without consulting a licensed fiduciary advisor.</p>
+                
+                <div class="footer-banner-ad">
+                    <div class="ad-tag">SPONSORED INVESTING AD</div>
+                    <div class="footer-ad-flex">
+                        <span><strong>2026 Wealth Planner:</strong> Start your tax-exempt retirement accounts in under 5 minutes online.</span>
+                        <a href="#" onclick="triggerAdClick(event, 'Footer Banner Ad')" class="footer-ad-btn">Start Today</a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- Floating Mobile bottom navigation bar (shown on small screens instead of sidebar) -->
+    <div class="mobile-bottom-nav">
+        <a href="#home" class="mobile-nav-link active" data-target="home">
+            <span class="mobile-icon">📊</span>
+            <span class="mobile-label">Home</span>
+        </a>
+        <a href="#saving-rule" class="mobile-nav-link" data-target="saving-rule">
+            <span class="mobile-icon">🧮</span>
+            <span class="mobile-label">Budget</span>
+        </a>
+        <a href="#micro-investing" class="mobile-nav-link" data-target="micro-investing">
+            <span class="mobile-icon">🌱</span>
+            <span class="mobile-label">Invest</span>
+        </a>
+        <a href="#credit-card" class="mobile-nav-link" data-target="credit-card">
+            <span class="mobile-icon">💳</span>
+            <span class="mobile-label">Cards</span>
+        </a>
+    </div>
+
+    <!-- Premium glassmorphic bottom floating ad container -->
+    <div id="sticky-social-ad-bar" class="social-ad-bar active">
+        <div class="social-ad-content">
+            <span class="social-ad-avatar">🎁</span>
+            <div class="social-ad-text">
+                <strong class="social-ad-title">Pending Reward Available!</strong>
+                <p class="social-ad-desc">Claim your free 2026 investment guide and a $500 reward voucher.</p>
+            </div>
+            <div class="social-ad-actions">
+                <a href="#" class="social-ad-accept-btn" onclick="triggerAdClick(event, 'Social Floating ad Accept')">Claim Guide</a>
+                <button id="close-social-ad" class="social-ad-close-btn">&times;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Partner Notification Toast -->
+    <div id="ad-notification-toast" class="toast">
+        <span class="toast-icon">✨</span>
+        <div class="toast-body">
+            <strong id="toast-title">Partner Offer Loading...</strong>
+            <p id="toast-desc">Redirecting to verified partner financial platform.</p>
+        </div>
+        <button onclick="closeToast()" class="toast-close-btn">&times;</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
