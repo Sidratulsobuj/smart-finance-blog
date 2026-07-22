@@ -118,14 +118,24 @@ function openArticle(id) {
     if (!post && Array.isArray(rawPostsArray)) {
         post = rawPostsArray.find(p => p.id === id || p.id.includes(id) || id.includes(p.id));
     }
+
+    if (!post && Array.isArray(rawPostsArray) && rawPostsArray.length > 0) {
+        const lowerId = id.toLowerCase();
+        post = rawPostsArray.find(p => {
+            const cat = (p.category || '').toLowerCase();
+            return lowerId.includes(cat) || cat.includes(lowerId) || lowerId.includes('saving') || lowerId.includes('investing') || lowerId.includes('card');
+        }) || rawPostsArray[0];
+    }
     
-    if (!post) {
-        post = articlesDatabase["how-to-create-a-10000-emergency-fund"] || Object.values(articlesDatabase)[0];
+    if (!post && Object.keys(articlesDatabase).length > 0) {
+        post = Object.values(articlesDatabase)[0];
     }
     
     if (post) {
         homeView.classList.remove("active");
+        homeView.style.display = "none";
         articleView.classList.add("active");
+        articleView.style.display = "block";
         
         document.getElementById("article-category").textContent = post.category || "Financial Masterclass";
         document.getElementById("article-title").textContent = post.title || "Financial Guide";
@@ -145,11 +155,11 @@ function openArticle(id) {
         setNavActive(id);
 
         // Initialize embedded calculators if matching post
-        if (id.includes("saving") || id.includes("50/30/20")) {
+        if (id.includes("saving") || id.includes("50/30/20") || id.includes("emergency")) {
             calculateBudget();
-        } else if (id.includes("micro") || id.includes("investing")) {
+        } else if (id.includes("micro") || id.includes("investing") || id.includes("estate")) {
             calculateGrowth();
-        } else if (id.includes("credit") || id.includes("reward")) {
+        } else if (id.includes("credit") || id.includes("reward") || id.includes("card")) {
             calculateRewards();
         }
 
@@ -183,7 +193,9 @@ function router() {
 
     if (hash === "" || hash === "home") {
         homeView.classList.add("active");
+        homeView.style.display = "block";
         articleView.classList.remove("active");
+        articleView.style.display = "none";
         
         setNavActive("home");
         document.title = "SmartlyEarn | Fintech Dashboard & Finance Masterclasses";
