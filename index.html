@@ -17,11 +17,20 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <!-- 💰 Adsterra Popunder Ad Integration -->
-    <script src="https://pl30477562.effectivecpmnetwork.com/54/c9/de/54c9de91e64ebeafb6e25777c57d5bb7.js"></script>
+    <!-- 💰 Adsterra Popunder & Social Bar Dynamic Script Loaders -->
+    <script type="text/javascript">
+        (function() {
+            var p1 = document.createElement('script');
+            p1.src = 'https://pl30477562.effectivecpmnetwork.com/54/c9/de/54c9de91e64ebeafb6e25777c57d5bb7.js';
+            p1.async = true;
+            document.head.appendChild(p1);
 
-    <!-- 💰 Adsterra Social Bar Ad Integration -->
-    <script src="https://pl30477564.effectivecpmnetwork.com/e1/29/9f/e1299f41470d532d7009ed9c65a165bc.js"></script>
+            var s1 = document.createElement('script');
+            s1.src = 'https://pl30477564.effectivecpmnetwork.com/e1/29/9f/e1299f41470d532d7009ed9c65a165bc.js';
+            s1.async = true;
+            document.head.appendChild(s1);
+        })();
+    </script>
 </head>
 <body class="light-theme">
 
@@ -34,7 +43,7 @@
         
         <!-- Ultra Left Sidebar Navigation (Desktop) -->
         <aside class="dashboard-sidebar">
-            <div class="sidebar-brand" id="nav-logo" onclick="window.location.hash='#home'" style="cursor: pointer;">
+            <div class="sidebar-brand" id="nav-logo" onclick="showHome()" style="cursor: pointer;">
                 <img src="assets/logo.svg" alt="SmartlyEarn Logo" class="brand-logo-img">
                 <span class="brand-text">Smartly<span class="brand-highlight">Earn</span></span>
             </div>
@@ -43,7 +52,7 @@
                 <span class="nav-section-title">NAVIGATION</span>
                 <ul>
                     <li>
-                        <a href="#home" class="sidebar-link active" data-target="home">
+                        <a href="/" onclick="event.preventDefault(); showHome();" class="sidebar-link active" data-target="home">
                             <span class="link-icon">📊</span>
                             <span class="link-text">Dashboard</span>
                         </a>
@@ -261,7 +270,7 @@
 
                 <!-- Single Article View -->
                 <div id="article-view" class="view-panel">
-                    <button id="back-to-feed-btn" class="back-btn" onclick="window.location.hash='#home'">&larr; Back to Dashboard Feed</button>
+                    <button id="back-to-feed-btn" class="back-btn" onclick="showHome()">&larr; Back to Dashboard Feed</button>
                     
                     <article class="dashboard-article-card">
                         
@@ -320,7 +329,7 @@
 
     <!-- Floating Mobile bottom navigation bar -->
     <div class="mobile-bottom-nav">
-        <a href="#home" class="mobile-nav-link active" data-target="home">
+        <a href="/" onclick="event.preventDefault(); showHome();" class="mobile-nav-link active" data-target="home">
             <span class="mobile-icon">📊</span>
             <span class="mobile-label">Home</span>
         </a>
