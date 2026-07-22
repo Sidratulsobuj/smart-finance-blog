@@ -3,7 +3,7 @@
    ======================================================= */
 
 /* Theme Color Variables */
-.light-theme {
+.light-theme, html.light-theme, body.light-theme {
     --bg-primary: hsl(210, 20%, 97%);
     --bg-secondary: rgba(255, 255, 255, 0.85);
     --bg-card: rgba(255, 255, 255, 0.9);
@@ -21,22 +21,22 @@
     --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.08);
 }
 
-.dark-theme {
-    --bg-primary: hsl(222, 28%, 6%);
-    --bg-secondary: rgba(15, 23, 42, 0.7);
-    --bg-card: rgba(20, 30, 54, 0.75);
-    --bg-sidebar: rgba(10, 18, 36, 0.85);
-    --accent-primary: hsl(150, 84%, 47%); /* Bright Neon Mint */
-    --accent-secondary: hsl(195, 90%, 55%); /* Cyan */
-    --accent-gold: hsl(38, 95%, 55%); /* Bright Gold */
-    --text-primary: hsl(210, 20%, 95%);
-    --text-secondary: hsl(210, 15%, 75%);
-    --text-muted: hsl(210, 10%, 55%);
-    --border-color: rgba(255, 255, 255, 0.08);
-    --border-glow: rgba(0, 210, 128, 0.2);
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.5);
+.dark-theme, html.dark-theme, body.dark-theme {
+    --bg-primary: hsl(222, 28%, 6%) !important;
+    --bg-secondary: rgba(15, 23, 42, 0.95) !important;
+    --bg-card: rgba(20, 30, 54, 0.9) !important;
+    --bg-sidebar: rgba(10, 18, 36, 0.95) !important;
+    --accent-primary: hsl(150, 84%, 47%) !important;
+    --accent-secondary: hsl(195, 90%, 55%) !important;
+    --accent-gold: hsl(38, 95%, 55%) !important;
+    --text-primary: hsl(210, 20%, 95%) !important;
+    --text-secondary: hsl(210, 15%, 75%) !important;
+    --text-muted: hsl(210, 10%, 55%) !important;
+    --border-color: rgba(255, 255, 255, 0.12) !important;
+    --border-glow: rgba(0, 210, 128, 0.2) !important;
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Reset & Core Setup */
