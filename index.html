@@ -17,20 +17,8 @@
     
     <link rel="stylesheet" href="style.css">
 
-    <!-- 💰 Adsterra Popunder & Social Bar Dynamic Script Loaders -->
-    <script type="text/javascript">
-        (function() {
-            var p1 = document.createElement('script');
-            p1.src = 'https://pl30477562.effectivecpmnetwork.com/54/c9/de/54c9de91e64ebeafb6e25777c57d5bb7.js';
-            p1.async = true;
-            document.head.appendChild(p1);
-
-            var s1 = document.createElement('script');
-            s1.src = 'https://pl30477564.effectivecpmnetwork.com/e1/29/9f/e1299f41470d532d7009ed9c65a165bc.js';
-            s1.async = true;
-            document.head.appendChild(s1);
-        })();
-    </script>
+    <!-- 💰 Adsterra Popunder Integration in Head -->
+    <script type="text/javascript" src="https://pl30477562.effectivecpmnetwork.com/54/c9/de/54c9de91e64ebeafb6e25777c57d5bb7.js"></script>
 </head>
 <body class="light-theme">
 
@@ -365,5 +353,17 @@
     </div>
 
     <script src="app.js"></script>
+
+    <!-- 💰 Adsterra Social Bar Script (Isolated Delayed Loader to prevent script conflict) -->
+    <script type="text/javascript">
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var sb = document.createElement('script');
+                sb.type = 'text/javascript';
+                sb.src = 'https://pl30477564.effectivecpmnetwork.com/e1/29/9f/e1299f41470d532d7009ed9c65a165bc.js';
+                document.body.appendChild(sb);
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
