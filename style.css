@@ -313,6 +313,9 @@ a {
     .mobile-bottom-nav {
         display: flex;
     }
+    #sticky-bottom-ad-bar {
+        display: none !important;
+    }
 }
 
 /* View Panel Visibility Switching */
