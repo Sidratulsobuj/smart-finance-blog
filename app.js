@@ -105,6 +105,18 @@ function renderDashboardFeed(posts) {
 // Open Article Handler (Fail-proof with Dynamic Layout Patterning)
 function openArticle(id) {
     if (!id) return;
+
+    const ROUTE_MAP = {
+        "saving-rule": "how-to-create-a-10000-emergency-fund",
+        "micro-investing": "how-fractional-real-estate-investing-wor",
+        "credit-card": "credit-card",
+        "saving": "how-to-create-a-10000-emergency-fund",
+        "investing": "how-fractional-real-estate-investing-wor",
+        "cards": "credit-card"
+    };
+    if (ROUTE_MAP[id]) {
+        id = ROUTE_MAP[id];
+    }
     
     const homeView = document.getElementById("home-view");
     const articleView = document.getElementById("article-view");
