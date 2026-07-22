@@ -333,24 +333,29 @@ function updateThemeButton(theme) {
 
 function initThemeSwitcher() {
     const btn = document.getElementById("theme-toggle-btn");
-    if (!btn) return;
     const body = document.body;
 
     const savedTheme = localStorage.getItem("dashboard-theme") || "light-theme";
-    body.className = savedTheme;
+    body.classList.remove("light-theme", "dark-theme");
+    body.classList.add(savedTheme);
     updateThemeButton(savedTheme);
     
-    btn.addEventListener("click", () => {
-        if (body.classList.contains("dark-theme")) {
-            body.className = "light-theme";
-            localStorage.setItem("dashboard-theme", "light-theme");
-            updateThemeButton("light-theme");
-        } else {
-            body.className = "dark-theme";
-            localStorage.setItem("dashboard-theme", "dark-theme");
-            updateThemeButton("dark-theme");
-        }
-    });
+    if (btn) {
+        btn.onclick = (e) => {
+            e.preventDefault();
+            if (body.classList.contains("dark-theme")) {
+                body.classList.remove("dark-theme");
+                body.classList.add("light-theme");
+                localStorage.setItem("dashboard-theme", "light-theme");
+                updateThemeButton("light-theme");
+            } else {
+                body.classList.remove("light-theme");
+                body.classList.add("dark-theme");
+                localStorage.setItem("dashboard-theme", "dark-theme");
+                updateThemeButton("dark-theme");
+            }
+        };
+    }
 }
 
 function initSocialAdClose() {
