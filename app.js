@@ -66,8 +66,6 @@ function renderDashboardFeed(posts) {
                 </div>
             </article>
         `;
-
-        }
     });
 
     html += `
