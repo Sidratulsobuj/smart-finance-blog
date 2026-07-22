@@ -192,6 +192,29 @@ function setNavActive(target) {
     });
 }
 
+// Show Home View (Cleans URL bar to remove #home)
+function showHome() {
+    const homeView = document.getElementById("home-view");
+    const articleView = document.getElementById("article-view");
+    
+    if (!homeView || !articleView) return;
+
+    homeView.classList.add("active");
+    homeView.style.display = "block";
+    articleView.classList.remove("active");
+    articleView.style.display = "none";
+    
+    if (window.history && window.history.pushState) {
+        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    } else {
+        window.location.hash = "";
+    }
+    
+    setNavActive("home");
+    document.title = "SmartlyEarn | Fintech Dashboard & Finance Guides";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // JavaScript Router Implementation
 function router() {
     const hash = window.location.hash.substring(1);
@@ -202,15 +225,7 @@ function router() {
     if (!homeView || !articleView) return;
 
     if (hash === "" || hash === "home") {
-        homeView.classList.add("active");
-        homeView.style.display = "block";
-        articleView.classList.remove("active");
-        articleView.style.display = "none";
-        
-        setNavActive("home");
-        document.title = "SmartlyEarn | Fintech Dashboard & Finance Masterclasses";
-        
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showHome();
     } else {
         openArticle(hash);
     }
