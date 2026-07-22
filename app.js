@@ -67,30 +67,6 @@ function renderDashboardFeed(posts) {
             </article>
         `;
 
-        if (index === 0) {
-            html += `
-                <div class="feed-ad-card">
-                    <span class="ad-tag-badge">SPONSORED</span>
-                    <div class="ad-card-banner" style="background-image: url('assets/ad_native.png');"></div>
-                    <div class="ad-card-body">
-                        <h4>Start Your Business with $100: 5 Steps to Earn $5,000/Month</h4>
-                        <p class="ad-source-domain">FinGrow.com</p>
-                        <a href="#" onclick="triggerAdClick(event, 'In-Feed Native Card 1')" class="ad-card-cta">Get Free Guide</a>
-                    </div>
-                </div>
-            `;
-        } else if (index === 2) {
-            html += `
-                <div class="feed-ad-card text-ad">
-                    <span class="ad-tag-badge">SPONSORED DEALS</span>
-                    <div class="ad-text-card-content">
-                        <span>🪙</span>
-                        <h4>This Under-The-Radar Crypto Coin is Slated to Grow 1,000% in 2026!</h4>
-                        <p>Financial institutions are quietly accumulating this utility asset.</p>
-                        <a href="#" onclick="triggerAdClick(event, 'In-Feed Native Crypto Card')" class="ad-text-cta">Reveal Ticker Symbol</a>
-                    </div>
-                </div>
-            `;
         }
     });
 
