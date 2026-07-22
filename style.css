@@ -130,12 +130,12 @@ a {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 280px;
+    width: 330px;
     background: var(--bg-sidebar);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-right: 1px solid var(--border-color);
-    padding: 20px 16px;
+    padding: 20px 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -223,12 +223,15 @@ a {
 
 /* Sidebar Ad Widget */
 .sidebar-ad-card {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
-    border: 1px dashed var(--accent-gold);
-    border-radius: 12px;
-    padding: 6px 2px;
-    margin-top: 5px;
-    box-shadow: var(--shadow-sm);
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    max-width: 100%;
 }
 
 .sidebar-ad-tag {
@@ -290,8 +293,8 @@ a {
 
 /* Main Dashboard Content Layout (Fluid) */
 .main-dashboard-content {
-    margin-left: 280px;
-    width: calc(100% - 280px);
+    margin-left: 330px;
+    width: calc(100% - 330px);
     padding: 30px 40px;
     display: flex;
     flex-direction: column;
