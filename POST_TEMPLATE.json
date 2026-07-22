@@ -1,0 +1,13 @@
+[
+  {
+    "id": "your-unique-post-slug-here",
+    "title": "Your Engaging Post Title Here (2026 Masterclass Edition)",
+    "category": "Budgeting Framework",
+    "readTime": "25 min read",
+    "excerpt": "A short, compelling 20-30 word summary of this masterclass that encourages readers to click and explore.",
+    "image": "assets/emergency_vault.svg",
+    "date": "2026-07-22",
+    "contentPart1": "<h2>Section 1: Introduction & High-Level Problem</h2>\n<p>Write your detailed introductory paragraphs here. Use <strong>strong bold text</strong> to highlight important financial concepts or stats.</p>\n<p>Explain the core mechanism, strategy, or market shift in 2026 clearly.</p>\n<img src=\"assets/saving_infographic.png\" alt=\"Infographic Description\" class=\"article-content-img\">\n\n<h2>Section 2: Core Strategy Breakdown</h2>\n<p>Detail the exact step-by-step method or system used by power users:</p>\n<ul>\n  <li><strong>Pillar 1:</strong> Detailed breakdown of the first key concept.</li>\n  <li><strong>Pillar 2:</strong> Detailed breakdown of the second key concept.</li>\n  <li><strong>Pillar 3:</strong> Detailed breakdown of the third key concept.</li>\n</ul>",
+    "contentPart2": "<h2>Section 3: Comparison Matrix & Math</h2>\n<div class=\"table-responsive\">\n  <table class=\"finance-table\">\n    <thead>\n      <tr>\n        <th>Strategy / Option</th>\n        <th>Annual APY</th>\n        <th>Tax Status</th>\n        <th>Estimated Return</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Traditional Option</td>\n        <td>0.01%</td>\n        <td>Taxable</td>\n        <td>+$1.00</td>\n      </tr>\n      <tr>\n        <td><strong>SmartlyEarn System</strong></td>\n        <td><strong>5.20%</strong></td>\n        <td><strong>Exempt</strong></td>\n        <td><strong>+$520.00</strong></td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<h2>Section 4: Step-by-Step Execution Roadmap</h2>\n<ol>\n  <li>First actionable step the reader should execute immediately.</li>\n  <li>Second actionable step with platform recommendations.</li>\n  <li>Third step for long-term compound growth.</li>\n</ol>\n\n<p><strong>Final Summary:</strong> Wrap up with a strong concluding verdict empowering the reader!</p>"
+  }
+]
