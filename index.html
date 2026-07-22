@@ -68,10 +68,8 @@
                     </li>
                 </ul>
 
-                <span class="nav-section-title">SPONSORED PLATFORMS</span>
-                <div class="sidebar-ad-card" style="text-align: center; padding: 10px 4px; background: var(--bg-tertiary); border-radius: 12px; overflow: hidden;">
-                    <span class="sidebar-ad-tag" style="display: block; margin-bottom: 8px;">ADVERTISEMENT</span>
-                    <div style="transform: scale(0.76); transform-origin: top center; height: 190px; width: 300px; margin: 0 auto;">
+                <div class="sidebar-ad-card" style="text-align: center; padding: 6px 2px; background: var(--bg-tertiary); border-radius: 12px; overflow: hidden; margin-top: 10px;">
+                    <div style="transform: scale(0.82); transform-origin: top center; height: 205px; width: 300px; margin: 0 auto;">
                         <script>
                           atOptions = {
                             'key' : '64b60da9f4378234c925ba0bfce2af56',
@@ -397,18 +395,20 @@
         </a>
     </div>
 
-    <!-- Premium glassmorphic bottom floating ad container -->
-    <div id="sticky-social-ad-bar" class="social-ad-bar active">
-        <div class="social-ad-content">
-            <span class="social-ad-avatar">🎁</span>
-            <div class="social-ad-text">
-                <strong class="social-ad-title">Pending Reward Available!</strong>
-                <p class="social-ad-desc">Claim your free 2026 investment guide and a $500 reward voucher.</p>
-            </div>
-            <div class="social-ad-actions">
-                <a href="#" class="social-ad-accept-btn" onclick="triggerAdClick(event, 'Social Floating ad Accept')">Claim Guide</a>
-                <button id="close-social-ad" class="social-ad-close-btn">&times;</button>
-            </div>
+    <!-- Sticky Bottom Footer 728x90 Banner Ad Container -->
+    <div id="sticky-bottom-ad-bar" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; display: flex; justify-content: center; align-items: center; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 4px 0; border-top: 1px solid var(--border-color); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);">
+        <div style="position: relative; max-width: 100%; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+            <button onclick="document.getElementById('sticky-bottom-ad-bar').style.display='none'" style="position: absolute; top: 2px; right: 6px; background: rgba(255,255,255,0.25); border: none; color: #fff; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; font-size: 14px; line-height: 20px; z-index: 10;">&times;</button>
+            <script>
+              atOptions = {
+                'key' : '9c23eade965bb17854d81fe70f432e74',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/9c23eade965bb17854d81fe70f432e74/invoke.js"></script>
         </div>
     </div>
 
