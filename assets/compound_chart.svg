@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradComp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="lineGradComp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#a7f3d0" />
+    </linearGradient>
+    <linearGradient id="areaGradComp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(16, 185, 129, 0.35)" />
+      <stop offset="100%" stop-color="rgba(16, 185, 129, 0.0)" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" rx="24" fill="url(#bgGradComp)" stroke="#1e293b" stroke-width="3" />
+
+  <text x="600" y="75" text-anchor="middle" font-family="'Outfit', system-ui, sans-serif" font-size="32" font-weight="900" fill="#f8fafc" letter-spacing="1">2026–2030 COMPOUND INVESTMENT YIELD CURVE</text>
+  <text x="600" y="112" text-anchor="middle" font-family="'Outfit', system-ui, sans-serif" font-size="18" font-weight="600" fill="#10b981">Projected Exponential Wealth Accumulation with Weekly $100 Deposits (+12.4% APY)</text>
+
+  <!-- Grid Lines -->
+  <line x1="120" y1="180" x2="1100" y2="180" stroke="#334155" stroke-dasharray="4,4" opacity="0.6" />
+  <text x="105" y="185" text-anchor="end" font-family="sans-serif" font-size="14" fill="#94a3b8">$10,000</text>
+
+  <line x1="120" y1="260" x2="1100" y2="260" stroke="#334155" stroke-dasharray="4,4" opacity="0.6" />
+  <text x="105" y="265" text-anchor="end" font-family="sans-serif" font-size="14" fill="#94a3b8">$7,500</text>
+
+  <line x1="120" y1="340" x2="1100" y2="340" stroke="#334155" stroke-dasharray="4,4" opacity="0.6" />
+  <text x="105" y="345" text-anchor="end" font-family="sans-serif" font-size="14" fill="#94a3b8">$5,000</text>
+
+  <line x1="120" y1="420" x2="1100" y2="420" stroke="#334155" stroke-dasharray="4,4" opacity="0.6" />
+  <text x="105" y="425" text-anchor="end" font-family="sans-serif" font-size="14" fill="#94a3b8">$2,500</text>
+
+  <line x1="120" y1="500" x2="1100" y2="500" stroke="#475569" stroke-width="2" />
+  <text x="105" y="505" text-anchor="end" font-family="sans-serif" font-size="14" fill="#94a3b8">$0</text>
+
+  <!-- Area Fill -->
+  <path d="M 150 500 L 150 480 Q 300 450 450 390 T 750 280 T 1050 180 L 1050 500 Z" fill="url(#areaGradComp)" />
+
+  <!-- Curve Line -->
+  <path d="M 150 480 Q 300 450 450 390 T 750 280 T 1050 180" fill="none" stroke="url(#lineGradComp)" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Data Nodes -->
+  <circle cx="150" cy="480" r="9" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="150" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#cbd5e1">2024</text>
+  <text x="150" y="455" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" fill="#34d399">$500</text>
+
+  <circle cx="300" cy="450" r="9" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="300" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#cbd5e1">2025</text>
+  <text x="300" y="425" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" fill="#34d399">$1,650</text>
+
+  <circle cx="450" cy="390" r="11" fill="#f59e0b" stroke="#ffffff" stroke-width="4" />
+  <text x="450" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="900" fill="#fbbf24">2026 (NOW)</text>
+  <text x="450" y="360" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="900" fill="#f59e0b">$3,420</text>
+
+  <circle cx="600" cy="330" r="9" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="600" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#cbd5e1">2027</text>
+  <text x="600" y="305" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" fill="#34d399">$5,380</text>
+
+  <circle cx="750" cy="280" r="9" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="750" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#cbd5e1">2028</text>
+  <text x="750" y="255" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" fill="#34d399">$7,620</text>
+
+  <circle cx="900" cy="220" r="9" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="900" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#cbd5e1">2029</text>
+
+  <circle cx="1050" cy="180" r="11" fill="#10b981" stroke="#ffffff" stroke-width="4" />
+  <text x="1050" y="535" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="900" fill="#34d399">2030</text>
+  <text x="1050" y="150" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="900" fill="#34d399">$12,850</text>
+
+  <!-- Metric Card Box -->
+  <g transform="translate(700, 360)">
+    <rect width="360" height="110" rx="14" fill="#1e293b" stroke="#334155" stroke-width="2" />
+    <text x="20" y="35" font-family="sans-serif" font-size="14" font-weight="700" fill="#94a3b8">2026 ACTIVE PORTFOLIO STATS</text>
+    <text x="20" y="65" font-family="sans-serif" font-size="20" font-weight="900" fill="#10b981">+12.4% Annual Yield</text>
+    <text x="20" y="90" font-family="sans-serif" font-size="14" fill="#cbd5e1">Total Equity Growth: +$9,430</text>
+  </g>
+</svg>
