@@ -36,6 +36,23 @@ async function loadDynamicPosts() {
 
 // Dynamically Render Dashboard Feed Grid (Latest Post First)
 function renderDashboardFeed(posts) {
+    // Update Hero Featured Card dynamically with posts[0] (latest featured article)
+    const heroCard = document.getElementById("hero-featured-card");
+    if (heroCard && posts && posts.length > 0) {
+        const featured = posts[0];
+        const bgImg = (featured.image && !featured.image.startsWith("linear-gradient") && !featured.image.startsWith("hsl")) 
+            ? featured.image 
+            : 'assets/tbill_vault_shield.webp';
+            
+        heroCard.style.backgroundImage = `linear-gradient(to bottom, rgba(30, 41, 59, 0.25), rgba(15, 23, 42, 0.95)), url('${bgImg}')`;
+        heroCard.innerHTML = `
+            <div class="hero-badge">FEATURED ARTICLE</div>
+            <h2>${featured.title}</h2>
+            <p>${featured.excerpt}</p>
+            <a href="#${featured.id}" onclick="event.preventDefault(); openArticle('${featured.id}');" class="hero-read-btn">Read Masterclass Guide &rarr;</a>
+        `;
+    }
+
     const gridContainer = document.querySelector(".dashboard-feed-grid");
     if (!gridContainer) return;
 
