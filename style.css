@@ -1332,6 +1332,23 @@ a {
     color: var(--accent-primary);
 }
 
+.article-rendered-body ul,
+.article-rendered-body ol {
+    margin: 22px 0 25px 0;
+    padding-left: 32px;
+    color: var(--text-secondary);
+}
+
+.article-rendered-body li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    padding-left: 6px;
+}
+
+.article-rendered-body li strong {
+    color: var(--text-primary);
+}
+
 /* Dashboard Fluid Footer */
 .dashboard-footer-bar {
     border-top: 1px solid var(--border-color);
